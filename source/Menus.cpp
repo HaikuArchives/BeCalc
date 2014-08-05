@@ -1,8 +1,9 @@
 #include <Path.h>
+#include <Clipboard.h>
 
 #include "BinaryRider.h"
 #include "Menus.h"
-#include "Preferences.h"
+#include "Preference.h"
 #include "Settings.h"
 
 static BMenuItem *prefItem;

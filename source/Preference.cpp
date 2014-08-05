@@ -24,6 +24,7 @@
 #include <Roster.h>
 #include <Screen.h>
 #include <FindDirectory.h>
+#include <File.h>
 #include <Directory.h>
 #include <Path.h>
 
@@ -89,7 +90,7 @@ char *Preference::GetPrefsPathName(bool forreal)
 	if(forreal)
 		find_directory(B_USER_SETTINGS_DIRECTORY,&prefpath);
 	else 
-		find_directory(B_COMMON_TEMP_DIRECTORY,&prefpath);
+		find_directory(B_SYSTEM_TEMP_DIRECTORY,&prefpath);
 	BDirectory dir(prefpath.Path());
 	dir.CreateDirectory("PrefServer",NULL);
 
