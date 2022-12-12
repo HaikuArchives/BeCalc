@@ -17,10 +17,12 @@ class MyListView : public PListView
 						: PListView(name, type), maxWidth(32), listLimit(0), doDrags(drag) {};
 		MyListView(const char *name, const char *fname, BListItem (* New (Preference *r)), 
 						  bool drag = true);
-											 
+		
+		virtual ~MyListView() {};
 		// so we can drag and drop list contents
+#ifdef OMITABH
 		virtual bool InitiateDrag(BPoint point, int32 index, bool wasSelected);
-				
+#endif			
 		// determine maximum index
 		int32 FindMaxIndex ();
 		

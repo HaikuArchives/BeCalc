@@ -16,7 +16,7 @@ class IMPEXPLIBLAYOUT MTextControl:
 				MTextControl(char *label, char *text, BMessage *mes);
 				MTextControl(BMessage*);
 				virtual ~MTextControl();
-				virtual long Archive(BMessage *archive, bool deep=true) const;
+				virtual status_t Archive(BMessage *archive, bool deep=true) const;
 				static BArchivable *Instantiate(BMessage *archive);
 
 				virtual void	SetLabel(const char *);

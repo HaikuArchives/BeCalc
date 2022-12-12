@@ -21,7 +21,7 @@ class IMPEXPLIBLAYOUT MScrollView: public MView, public BScrollView
 			border_style border=B_FANCY_BORDER, minimax size=0);
 		MScrollView(BMessage*);
 		virtual ~MScrollView();
-		virtual long Archive(BMessage *archive, bool deep=true) const;
+		virtual status_t Archive(BMessage *archive, bool deep=true) const;
 		static BArchivable *Instantiate(BMessage *archive);
 		virtual minimax layoutprefs();
 		virtual BRect layout(BRect);

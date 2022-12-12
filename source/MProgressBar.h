@@ -16,7 +16,7 @@ class IMPEXPLIBLAYOUT MProgressBar :  public MView, public BView
 	public:		MProgressBar(BHandler *, bool pulsed_updates=false);
 				MProgressBar(BMessage*);
 				virtual ~MProgressBar();
-				virtual long Archive(BMessage *archive, bool deep=true) const;
+				virtual status_t Archive(BMessage *archive, bool deep=true) const;
 				static BArchivable *Instantiate(BMessage *archive);
 
 				virtual	minimax	layoutprefs();

@@ -15,7 +15,7 @@ class IMPEXPLIBLAYOUT TabGroup :  public MGroup, public BControl
 			 	TabGroup(char *arg=0, ...);
 				TabGroup(BMessage*);
 			 	virtual ~TabGroup();
-				virtual long Archive(BMessage *archive, bool deep=true) const;
+				virtual status_t Archive(BMessage *archive, bool deep=true) const;
 				static BArchivable *Instantiate(BMessage *archive);
 				virtual	minimax	layoutprefs();
 				virtual BRect	layout(BRect rect);

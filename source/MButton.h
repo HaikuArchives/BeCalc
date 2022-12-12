@@ -15,7 +15,7 @@ class IMPEXPLIBLAYOUT MButton :  public MView, public BButton
 				MButton(const char *label, ulong id=0,minimax size=minimax(-1,-1,1E6,1E6,1));
 				MButton(const char *label, BMessage *message, BHandler *handler=NULL, minimax size=minimax(-1,-1,1E6,1E6,1));
 				MButton(BMessage*);
-				virtual long Archive(BMessage *archive, bool deep=true) const;
+				virtual status_t Archive(BMessage *archive, bool deep=true) const;
 				static BArchivable *Instantiate(BMessage *archive);
 
 				virtual ~MButton();

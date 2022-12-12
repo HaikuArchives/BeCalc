@@ -231,7 +231,7 @@ void Complex::NumToStr(const Real& A, short Decimal, short Digits, BString &Str,
 	if (dp == B_ERROR)
 		dp = Str.CountChars();
 	else if (GetDigitSep() == '.')
-		Str[dp] = ',';
+		Str.ReplaceFirst('.', ',');
 	
 	if ((GetDigitSep() != 0x0) && (Mode == Normal)) {
 		i = dp - ds;

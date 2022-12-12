@@ -30,7 +30,7 @@ void SetEditEnabled(bool enabled, BTextView *v)
 	bool redo;
 	int32 sels, sele;
 	BMessage *clip = (BMessage *)NULL;
-	int32 textlen;
+	ssize_t textlen;
 	const char *text;
 	undo_state state = v->UndoState(&redo);
 	for (int32 i = 0; i < 4; i++) edit[i]->SetEnabled(enabled);	
@@ -51,7 +51,7 @@ void SetEditEnabled(bool enabled, BTextView *v)
 	}
 	edit[3]->SetEnabled(false);
 	if (be_clipboard->Lock()) {
-		if ((clip = be_clipboard->Data()))
+		if (clip = be_clipboard->Data())
 			clip->FindData("text/plain", B_MIME_TYPE, (const void **)&text, &textlen);
 		be_clipboard->Unlock();
 		if (textlen > 0) edit[3]->SetEnabled(true);

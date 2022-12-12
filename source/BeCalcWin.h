@@ -13,6 +13,10 @@
 #include "Settings.h"
 #include "Variables.h"
 
+
+#include <FilePanel.h>
+
+
 // local redefinition of MTextView
 class MyTextView : public MTextView
 {

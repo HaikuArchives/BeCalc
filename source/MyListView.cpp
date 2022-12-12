@@ -10,6 +10,25 @@
 
 static const char *COUNT = "listcnt";
 
+MyListView::MyListView(const char *name, const char *fname, BListItem (* New (Preference *r)), bool drag) : 
+	PListView(name, B_SINGLE_SELECTION_LIST), maxWidth(32), listLimit(0), doDrags(drag)
+{
+	MyItem *item;
+	BString pname("application/x-vnd.CI-BeCalc");
+	pname.Append(fname);
+	pref = new Preference((char *)pname.String());
+	if (pref->Load() == B_OK) {
+		int32 cnt = 0;
+		MyItem::count = 0;
+		pref->FindInt32(COUNT, &cnt);
+		for (int32 i = 0; i<cnt; i++) {
+			item = (MyItem *)New(pref);
+			AddItem(item);
+		}
+	}
+	pref->MakeEmpty();  // clear items
+}
+
 #ifdef OMITABH
 bool MyListView::InitiateDrag(BPoint point, int32 index, bool wasSelected)
 {
@@ -116,21 +135,3 @@ int32 MyListView::GetMaxPages (BRect printArea)
 }
 
 
-MyListView::MyListView(const char *name, const char *fname, BListItem (* New (Preference *r)), bool drag) : 
-	PListView(name, B_SINGLE_SELECTION_LIST), maxWidth(32), listLimit(0), doDrags(drag)
-{
-	MyItem *item;
-	BString pname("application/x-vnd.CI-BeCalc");
-	pname.Append(fname);
-	pref = new Preference((char *)pname.String());
-	if (pref->Load() == B_OK) {
-		int32 cnt = 0;
-		MyItem::count = 0;
-		pref->FindInt32(COUNT, &cnt);
-		for (int32 i = 0; i<cnt; i++) {
-			item = (MyItem *)New(pref);
-			AddItem(item);
-		}
-	}
-	pref->MakeEmpty();  // clear items
-}

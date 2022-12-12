@@ -22,7 +22,7 @@ class PropGadget : public MView, public BControl
 					 long extraspacing=0);
 				PropGadget(BMessage*);
 				virtual ~PropGadget();
-				virtual long Archive(BMessage *archive, bool deep=true) const;
+				virtual status_t Archive(BMessage *archive, bool deep=true) const;
 				static BArchivable *Instantiate(BMessage *archive);
 
 				BBitmap*	Pknob;

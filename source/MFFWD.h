@@ -13,7 +13,7 @@ class IMPEXPLIBLAYOUT MFFWD : public MPictureButton
 				MFFWD(BHandler *id, BMessage*);
 				MFFWD(BMessage*);
 				virtual ~MFFWD();
-				virtual long Archive(BMessage *archive, bool deep=true) const;
+				virtual status_t Archive(BMessage *archive, bool deep=true) const;
 				static BArchivable *Instantiate(BMessage *archive);
 				
 				virtual void MakePictures();

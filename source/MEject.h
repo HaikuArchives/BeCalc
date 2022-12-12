@@ -13,7 +13,7 @@ class IMPEXPLIBLAYOUT MEject : public MPictureButton
 				MEject(BHandler *id, BMessage*);
 				MEject(BMessage*);
 				virtual ~MEject();
-				virtual long Archive(BMessage *archive, bool deep=true) const;
+				virtual status_t Archive(BMessage *archive, bool deep=true) const;
 				static BArchivable *Instantiate(BMessage *archive);
 
 				virtual	void MakePictures();

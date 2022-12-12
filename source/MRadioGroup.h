@@ -15,7 +15,7 @@ class IMPEXPLIBLAYOUT MRadioGroup :  public MGroup, public BView
 				MRadioGroup(BMessage *model, BHandler *target, char *item ...);
 				MRadioGroup(BMessage*);
 				virtual ~MRadioGroup();
-				virtual long Archive(BMessage *archive, bool deep=true) const;
+				virtual status_t Archive(BMessage *archive, bool deep=true) const;
 				static BArchivable *Instantiate(BMessage *archive);
 
 				virtual	minimax	layoutprefs();

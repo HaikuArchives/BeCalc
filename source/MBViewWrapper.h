@@ -12,7 +12,7 @@ class IMPEXPLIBLAYOUT MBViewWrapper :  public MView, public BView
 {
 	public:		MBViewWrapper(BView *view, bool usepreferred=true, bool x_fixed=true, bool y_fixed=true);
 				MBViewWrapper(BMessage*);
-				virtual long Archive(BMessage *archive, bool deep=true) const;
+				virtual status_t Archive(BMessage *archive, bool deep=true) const;
 				static BArchivable *Instantiate(BMessage *archive);
 				virtual ~MBViewWrapper();
 				virtual	minimax	layoutprefs();
