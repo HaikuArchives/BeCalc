@@ -15,7 +15,7 @@ class IMPEXPLIBLAYOUT LayeredGroup :  public MGroup, public BControl
 			 	LayeredGroup(MView *arg=0, ...);
 				LayeredGroup(BMessage*);
 				virtual ~LayeredGroup();
-				virtual long Archive(BMessage *archive, bool deep=true) const;
+				virtual status_t Archive(BMessage *archive, bool deep=true) const;
 				static BArchivable *Instantiate(BMessage *archive);
 				virtual	minimax	layoutprefs();
 				virtual BRect	layout(BRect rect);

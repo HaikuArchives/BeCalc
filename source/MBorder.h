@@ -16,7 +16,7 @@ class IMPEXPLIBLAYOUT MBorder :  public MGroup, public BView
 	
 			MBorder(ulong border_type,ulong spacing,char *name=NULL,MView *kid=NULL);
 			MBorder(BMessage*);
-			virtual long Archive(BMessage *archive, bool deep=true) const;
+			virtual status_t Archive(BMessage *archive, bool deep=true) const;
 			static BArchivable *Instantiate(BMessage *archive);
 			~MBorder();
 			virtual	minimax	layoutprefs();

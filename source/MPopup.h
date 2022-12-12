@@ -18,7 +18,7 @@ class IMPEXPLIBLAYOUT MPopup:
 				MPopup(char *label, BMessage*, BHandler *, char *item ...);
 				MPopup(BMessage*);
 				virtual ~MPopup();
-				virtual long Archive(BMessage *archive, bool deep=true) const;
+				virtual status_t Archive(BMessage *archive, bool deep=true) const;
 				static BArchivable *Instantiate(BMessage *archive);
 
 				virtual float	LabelWidth();

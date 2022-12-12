@@ -23,6 +23,7 @@
 #include <View.h>
 #endif
 
+#include <netinet/in.h>
 #include <string.h>
 #include <ByteOrder.h>
 

@@ -13,7 +13,7 @@ class IMPEXPLIBLAYOUT MCheckBox :  public MView, public BCheckBox
 	public:		MCheckBox(const char *label,ulong id=0, bool state=false);
 				MCheckBox(const char *label, BMessage *message, BHandler *handler=NULL, bool state=false);
 				MCheckBox(BMessage*);
-				virtual long Archive(BMessage *archive, bool deep=true) const;
+				virtual status_t Archive(BMessage *archive, bool deep=true) const;
 				static BArchivable *Instantiate(BMessage *archive);
 
 				virtual ~MCheckBox();

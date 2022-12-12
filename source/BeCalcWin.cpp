@@ -14,6 +14,7 @@
 #include "ExComplex.h"
 #include "Menus.h"
 #include "MBitmap.h"
+#include "MyListView.h"
 #include "Printer.h"
 #include "Reals.h"
 #include "Statistics.h"
@@ -373,7 +374,7 @@ void BeCalcWin::InitWindow()
 			case wReserved2:
 			case wNone: break;
 			default: // this is a plot window
-				doOpen.AddInt32("id", floor(log(select)/log(2))-5);
+				doOpen.AddInt32("id", floor(log((double)select)/log(2))-5);
 				doOpen.what = ID_REOPEN_PLOT;
 				break;
 		}

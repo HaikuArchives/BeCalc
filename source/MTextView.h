@@ -13,7 +13,7 @@ class IMPEXPLIBLAYOUT MTextView :  public MView, public BTextView
 	public:		MTextView(minimax size=0);
 				MTextView(BMessage*);
 				virtual ~MTextView();
-				virtual long Archive(BMessage *archive, bool deep=true) const;
+				virtual status_t Archive(BMessage *archive, bool deep=true) const;
 				static BArchivable *Instantiate(BMessage *archive);
 
 				virtual	minimax	layoutprefs();

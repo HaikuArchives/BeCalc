@@ -13,7 +13,7 @@ class IMPEXPLIBLAYOUT Space :  public MView, public BView
 				Space(minimax);
 				Space(BMessage*);
 		virtual ~Space();
-		virtual long Archive(BMessage *archive, bool deep=true) const;
+		virtual status_t Archive(BMessage *archive, bool deep=true) const;
 		static BArchivable *Instantiate(BMessage *archive);
 		virtual	minimax	layoutprefs();
 		virtual BRect	layout(BRect rect);

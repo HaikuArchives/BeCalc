@@ -167,7 +167,7 @@ void Scanner::number(Tokens &sym)
 	if ((Complex::GetDigitSep() == '.') || (Complex::GetFracSep() == '.'))
 	{
 		punctuationchars[0] = '.';
-		numberchars[0] = ',';
+		numberchars.ReplaceFirst('.', ',');
 	}
 	
 	// check if first digit is zero or this is a based number
@@ -219,7 +219,7 @@ void Scanner::number(Tokens &sym)
 	{
 		ps = LocateChar(constant.String(), ',', 0);
 		if(ps >= 0)
-			constant[ps] = '.';
+			constant.ReplaceFirst(',', '.');
 	}
 
 	// Convert to a Complex number

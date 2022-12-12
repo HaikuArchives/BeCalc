@@ -18,7 +18,7 @@ class IMPEXPLIBLAYOUT MPictureButton : public MView, public BPictureButton
 		virtual ~MPictureButton();
 				void	SetRepeat(ulong initial_delay, ulong repeat_delay);
 
-		virtual long Archive(BMessage *archive, bool deep=true) const;
+		virtual status_t Archive(BMessage *archive, bool deep=true) const;
 		static BArchivable *Instantiate(BMessage *archive);
 
 		virtual	minimax	layoutprefs();

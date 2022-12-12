@@ -13,7 +13,7 @@ class IMPEXPLIBLAYOUT MStop : public MPictureButton
 				MStop(BHandler *id, BMessage*);
 				MStop(BMessage*);
 				virtual ~MStop();
-				virtual long Archive(BMessage *archive, bool deep=true) const;
+				virtual status_t Archive(BMessage *archive, bool deep=true) const;
 				static BArchivable *Instantiate(BMessage *archive);
 				virtual void MakePictures();
 };

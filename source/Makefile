@@ -35,7 +35,7 @@ APP_MIME_SIG=
 #	are included from different directories.  Also note that spaces
 #	in folder names do not work well with this makefile.
 SRCS= About.cpp BeCalc.cpp BeCalcApp.cpp BeCalcWin.cpp BinaryRider.cpp \
-Buttons.cpp ColorBox.cpp Conversion.cpp CreateLinks.cpp Equations.cpp \
+Buttons.cpp ColorBox.cpp Conversion.cpp Equations.cpp \
 Errors.cpp ExComplex.cpp ExIntegers.cpp FFont.cpp Help.cpp MBitmap.cpp \
 Menus.cpp Mortgage.cpp MyItem.cpp MyListView.cpp Plots.cpp Preference.cpp \
 PrefWin.cpp Printer.cpp PWindow.cpp Reals.cpp Scanner.cpp Settings.cpp \
@@ -71,7 +71,7 @@ RSRCS=
 #		naming scheme you need to specify the path to the library
 #		and it's name
 #		library: my_lib.a entry: my_lib.a or path/my_lib.a
-LIBS= be layout translation tracker
+LIBS= be layout translation tracker stdc++
 
 #	specify additional paths to directories following the standard
 #	libXXX.so or libXXX.a naming scheme.  You can specify full paths

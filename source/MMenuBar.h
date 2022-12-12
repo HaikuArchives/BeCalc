@@ -16,7 +16,7 @@ class IMPEXPLIBLAYOUT MMenuBar: public MView, public BMenuBar
 		MMenuBar(menu_layout layout, bool resizetofit);
 		MMenuBar(BMessage*);
 		virtual ~MMenuBar();
-		virtual long Archive(BMessage *archive, bool deep=true) const;
+		virtual status_t Archive(BMessage *archive, bool deep=true) const;
 		static BArchivable *Instantiate(BMessage *archive);
 		
 		virtual minimax layoutprefs();

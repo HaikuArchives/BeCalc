@@ -20,7 +20,7 @@ class IMPEXPLIBLAYOUT MWindow : public BWindow
 		MWindow(BRect r,const char *name,window_look look, window_feel feel,uint32 flags, uint32 workspaces=B_CURRENT_WORKSPACE);
 		MWindow(BMessage*);
 		virtual ~MWindow();
-		virtual long Archive(BMessage *archive, bool deep=true) const;
+		virtual status_t Archive(BMessage *archive, bool deep=true) const;
 		static BArchivable *Instantiate(BMessage *archive);
 
 		virtual const BFont *getfont(fontspec font);

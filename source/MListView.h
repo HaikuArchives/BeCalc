@@ -14,7 +14,7 @@ class IMPEXPLIBLAYOUT MListView :  public MView, public BListView
 									 minimax size=minimax(50,50));
 				MListView(BMessage*);
 				virtual ~MListView();
-				virtual long Archive(BMessage *archive, bool deep=true) const;
+				virtual status_t Archive(BMessage *archive, bool deep=true) const;
 				static BArchivable *Instantiate(BMessage *archive);
 				virtual void reloadfont(BFont *font[]);
 				virtual	minimax	layoutprefs();
